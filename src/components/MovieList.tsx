@@ -24,8 +24,6 @@ const SearchTermText = styled.p`
 const List: FC<IListProps> = ({ searchTerm }) => {
     const { response, error, loading }: IApiResponse = useApi(searchTerm);
 
-    console.log('response ', response);
-
     return (
         <>
             <SearchTermText>
