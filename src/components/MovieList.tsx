@@ -22,7 +22,7 @@ const SearchTermText = styled.p`
 `;
 
 const List: FC<IListProps> = ({ searchTerm }) => {
-    const { response, error, loading }: IApiResponse = useApi(searchTerm);
+    const { response, error, loading }: IApiResponse = useApi(searchTerm.trim());
 
     return (
         <>
