@@ -24,15 +24,14 @@ const SearchTermText = styled.p`
 const List: FC<IListProps> = ({ searchTerm }) => {
     const { response, error, loading }: IApiResponse = useApi(searchTerm);
 
+    console.log('response ', response);
+
     return (
         <>
             <SearchTermText>
-                {error &&
-                    searchTerm.length < 3 &&
-                    !loading &&
-                    !response?.Search &&
-                    `We could not find anything that matched ${searchTerm}. Try defining your search more by adding more words.`}
-                {!error && !loading && response?.Search ? `Results for "${searchTerm}"` : ''}
+                {!loading && response && response.Error
+                    ? `No results for for "${searchTerm}". Try defining your search more by adding more words.`
+                    : response?.Search && `Results for "${searchTerm}"`}
             </SearchTermText>
             {!error &&
                 !loading &&

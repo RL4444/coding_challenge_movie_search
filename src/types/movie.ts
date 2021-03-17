@@ -7,7 +7,7 @@ export interface IMovieApi {
 }
 
 interface IApiSuccessResponse {
-    Error?: string
+    Error?: string;
     Response: string;
     Search?: Array <IMovieApi>;
     totalResults?: string;
