@@ -56,7 +56,7 @@ const MovieTitle = styled.p`
 `;
 const Year = styled.p`
     color: ${(p) => p.theme.colors.main};
-    font-weight: 600;
+    font-weight: 400;
     margin-top: 8px;
     @media (min-width: 800px) {
         font-size: 18px;
@@ -65,7 +65,7 @@ const Year = styled.p`
 
 const Movie: FC<IMovieApi> = ({ Poster: poster, Title: title, Type: type, Year: year, imdbID: id }) => {
     return (
-        <Container href={`https://www.imdb.com/title/${id}`} rel='noopener' target='__blank'>
+        <Container href={`https://www.imdb.com/title/${id}`} rel='noopener' target='_blank'>
             <PosterImgWrapper>
                 <PosterImg src={poster} />
             </PosterImgWrapper>

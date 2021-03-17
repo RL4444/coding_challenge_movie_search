@@ -8,7 +8,7 @@ interface ISearchbarProps {
 }
 
 const SearchbarWrapper = styled.div`
-    margin-top: 1em;
+    margin-top: 2em;
     display: flex;
     border-radius: 6px;
     align-items: center;
@@ -17,9 +17,8 @@ const SearchbarWrapper = styled.div`
     box-shadow: 5px 5px 15px -6px rgba(0, 0, 0, 0.41);
 `;
 const Input = styled.input`
-    padding: 6px 6px;
+    padding: 8px;
     outline: none;
-    border-radius: 6px;
     background: transparent;
     border: transparent;
     color: ${(p) => p.theme.colors.main};
@@ -28,8 +27,7 @@ const Input = styled.input`
 `;
 
 const ClearInputButton = styled.p`
-    /* color: ${(p) => p.theme.colors.main}; */
-    color: white;
+    color: #fff;
     font-size: 20px;
     margin-left: auto;
     margin-right: 6px;
@@ -39,9 +37,11 @@ const ClearInputButton = styled.p`
     border-top-right-radius: 6px;
     width: 100px;
     margin: 0;
-    padding-top: 10px;
     text-align: center;
     vertical-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     background: ${(p) => p.theme.colors.secondary};
     &::before {
         content: '✖';
@@ -50,6 +50,12 @@ const ClearInputButton = styled.p`
         transition-duration: 0.2s;
     }
     @media (min-width: 800px) {
+        &::before {
+            content: '✖';
+            font-size: 22px;
+            margin-left: 4px;
+            transition-duration: 0.2s;
+        }
         &:hover {
             cursor: pointer;
             &::before {

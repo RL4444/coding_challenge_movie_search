@@ -2,8 +2,6 @@ import React, { FC, ReactElement, useState } from 'react';
 import styled from 'styled-components';
 
 import useApi from '../hooks/useApi';
-
-import Spinner from './Spinner';
 import Movie from './Movie';
 
 import { IApiResponse } from '../types/movie';
