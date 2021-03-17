@@ -8,12 +8,12 @@ export const Layout = styled.section`
     height: 100%;
     @media (min-width: 800px) {
         height: auto;
-        margin-top: 12em;
+        padding-top: 12em;
         transition-duration: 0.3s;
         max-width: 800px;
         &.top {
             transition-duration: 0.4s;
-            margin-top: 1em;
+            padding-top: 1em;
         }
     }
 `;
