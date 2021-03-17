@@ -1,7 +1,7 @@
 import React, { useState, FC, useEffect, ChangeEvent } from 'react';
 import styled from 'styled-components';
 
-import { Layout, Title } from './styled/index';
+import { Layout, Title, SubTitle } from './styled/index';
 
 import MovieList from './components/MovieList';
 import Searchbar from './components/Searchbar';
@@ -25,8 +25,9 @@ const App: FC = () => {
     const clearSearchBar = () => setSearchTerm('');
 
     return (
-        <Layout>
+        <Layout className={searchTerm.length > 0 ? 'top' : ''}>
             <Title>MOVIEBOOK</Title>
+            {searchTerm.length > 0 && <SubTitle>Find your favourite movies</SubTitle>}
             <Searchbar searchTerm={searchTerm} clear={clearSearchBar} change={handleChange} />
             {searchTerm.length > 0 && !isTyping && <MovieList searchTerm={searchTerm} />}
             {isTyping && searchTerm.length > 0 && (

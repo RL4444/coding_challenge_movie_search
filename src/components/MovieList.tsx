@@ -27,7 +27,11 @@ const List: FC<IListProps> = ({ searchTerm }) => {
     return (
         <>
             <SearchTermText>
-                {error ? `We could not find anything that matched ${searchTerm}` : `Results for "${searchTerm}"`}
+                {error && searchTerm.length < 3
+                    ? `Please try a fuller title. "${searchTerm}" is a bit too short.`
+                    : error
+                    ? `We could not find anything that matched ${searchTerm}`
+                    : `Results for "${searchTerm}"`}
             </SearchTermText>
             {!error &&
                 !loading &&
