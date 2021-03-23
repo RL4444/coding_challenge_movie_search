@@ -34,6 +34,6 @@ End to end tests are ran using cypress - https://cypress.io
 
 From your terminal window in the root of the project directory run `yarn cypress`
 
-This should open the cypress app window that will show a testing file called `App-test.spec.js`, which is also found in `./cypress/integration/App-test.spec.js`
+This should open the cypress app window that will show a testing file called `App-test.spec.js`, which is also found in `./cypress/integration/App-test.spec.js`. Edit this file to add or remove more tests. 
 
 Click on the file `App-test.spec.js` in the cypress app window to begin running tests.
