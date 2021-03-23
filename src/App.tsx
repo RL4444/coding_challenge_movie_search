@@ -25,8 +25,8 @@ const App: FC = () => {
     const clearSearchBar = () => setSearchTerm('');
 
     return (
-        <Layout className={searchTerm.length > 0 ? 'top' : ''}>
-            <Title>MOVIEBOOK</Title>
+        <Layout data-cy={'app-cy'} className={searchTerm.length > 0 ? 'top' : ''}>
+            <Title data-cy={'title-cy'}>MOVIEBOOK</Title>
             {searchTerm.length <= 0 && <SubTitle>Find your favourite movies</SubTitle>}
             <Searchbar searchTerm={searchTerm} clear={clearSearchBar} change={handleChange} />
             {searchTerm.length > 0 && !isTyping && <MovieList searchTerm={searchTerm} />}

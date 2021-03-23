@@ -42,6 +42,7 @@ const SpinnerWrap = styled.div.attrs<SpinnerProps>(({ height = 50, width = 50 })
 const Spinner = ({ width = 50, height = 50, fixed = false, overlay = false, ...rest }: SpinnerProps) => {
     return (
         <SpinnerWrap
+            data-cy={'spinner-cy'}
             className={`spinner ${fixed ? 'fixed' : ''}`}
             height={height}
             width={width}

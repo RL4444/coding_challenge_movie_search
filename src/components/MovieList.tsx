@@ -23,7 +23,7 @@ const List: FC<IListProps> = ({ searchTerm }) => {
     const { response, error, loading }: IApiResponse = useApi(searchTerm.trim());
 
     return (
-        <>
+        <div data-cy={'movie-list-cy'}>
             <SearchTermText>
                 {!loading && response && response.Error
                     ? `No results for for "${searchTerm}". Try defining your search more by adding more words.`
@@ -35,7 +35,7 @@ const List: FC<IListProps> = ({ searchTerm }) => {
                 response.Search.map(({ Poster, Title, Type, Year, imdbID }) => {
                     return <Movie key={imdbID} Poster={Poster} Title={Title} Type={Type} Year={Year} imdbID={imdbID} />;
                 })}
-        </>
+        </div>
     );
 };
 

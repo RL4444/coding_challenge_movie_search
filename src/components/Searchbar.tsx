@@ -72,7 +72,7 @@ const Searchbar: FC<ISearchbarProps> = ({ searchTerm, clear, change }): ReactEle
     const [isFocused, setFocused] = useState(false);
 
     return (
-        <SearchbarWrapper>
+        <SearchbarWrapper data-cy={'searchbar-cy'}>
             <Input
                 value={searchTerm}
                 onFocus={() => setFocused(true)}

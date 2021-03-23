@@ -65,7 +65,7 @@ const Year = styled.p`
 
 const Movie: FC<IMovieApi> = ({ Poster: poster, Title: title, Type: type, Year: year, imdbID: id }) => {
     return (
-        <Container href={`https://www.imdb.com/title/${id}`} rel='noopener' target='_blank'>
+        <Container data-cy={'movie-cy'} href={`https://www.imdb.com/title/${id}`} rel='noopener' target='_blank'>
             <PosterImgWrapper>
                 <PosterImg src={poster} />
             </PosterImgWrapper>
