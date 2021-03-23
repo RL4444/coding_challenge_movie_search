@@ -32,7 +32,7 @@ Add your api key. Without the api key the project will not run.
 
 End to end tests are ran using cypress - https://cypress.io
 
-From your terminal window in the root of the project directory run `yarn cypress`
+From your terminal window in the root of the project directory run `yarn cypress` && in a separate terminal window run in the root of the directory `yarn start` -- cypress only works while the server is running
 
 This should open the cypress app window that will show a testing file called `App-test.spec.js`, which is also found in `./cypress/integration/App-test.spec.js`. Edit this file to add or remove more tests. 
 
