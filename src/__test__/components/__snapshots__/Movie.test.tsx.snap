@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders without crashing 1`] = `
+<styled.a
+  href="https://www.imdb.com/title/A test String"
+  rel="noopener"
+  target="_blank"
+>
+  <styled.div>
+    <styled.img
+      src="A test String"
+    />
+  </styled.div>
+  <styled.div>
+    <styled.p>
+      A test String
+    </styled.p>
+    <styled.p>
+      A test String
+    </styled.p>
+  </styled.div>
+</styled.a>
+`;

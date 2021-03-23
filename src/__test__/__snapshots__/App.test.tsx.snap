@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the component 1`] = `
+<styled.section
+  className=""
+>
+  <styled.h1>
+    MOVIEBOOK
+  </styled.h1>
+  <styled.h2>
+    Find your favourite movies
+  </styled.h2>
+  <Searchbar
+    change={[Function]}
+    clear={[Function]}
+    searchTerm=""
+  />
+</styled.section>
+`;
